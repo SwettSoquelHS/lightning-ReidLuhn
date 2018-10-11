@@ -7,7 +7,7 @@ void setup()
 {
   size(800,500);
   background(90);
-  strokeWeight(1);
+  strokeWeight(5);
   startX = 0;
   startY = 150;
   endX = 0; 
@@ -16,8 +16,9 @@ void setup()
 void draw()
 {
 fill(255, 40);
+noStroke();
 rect(0,0, width, height);
-stroke((int)Math.random());
+stroke(random(0,250), random(0,250), random(0,250), random(50, 200));
 while (endX < 800 && endX > -800){
   endX = startX + (int)(Math.random() * 10); 
   endY = startY + (int)((Math.random() * 19) - 9);
